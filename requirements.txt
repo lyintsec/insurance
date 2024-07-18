@@ -1,0 +1,4 @@
+prompt_toolkit==3.0.47
+console-menu==0.8.0
+colorama==0.4.6
+cryptography==42.0.8
