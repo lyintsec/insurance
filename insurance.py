@@ -628,7 +628,7 @@ def config_command():
         # Удобное название параметра
         configuration_name = configuration['configuration_names'][name]
 
-        # На *nix ctrl + c работать не будет
+        # На UNIX ctrl + c работать не будет
         # Поэтому меняем имя кнопки выхода
         if os.name == 'nt':
             selection_menu_exit_text = f'Возврат ({ctrl_c_hotkey})'
@@ -842,7 +842,7 @@ def config_command():
         )
     
     # Перехват SIGINT на linux
-    # Блок кода для *nix подобных систем, что бы 
+    # Блок кода для UNIX подобных систем, что бы 
     # правильно обрабатывать SIGINT во время работы console-menu.
     # Проблема в том, что при нажатии ctrl+c происходит некорректное поведение
     if os.name != 'nt':
@@ -1076,7 +1076,7 @@ start_time = None # Время начала отсчета
 update_timer_state = False # Статус обновления надписи в input
 
 # Глобальная переменная, означающая что было нажато ctrl+c
-# На *nix подобных системах обработка SIGINT происходит не так, как хотелось бы
+# На UNIX подобных системах обработка SIGINT происходит не так, как хотелось бы
 # Отсюда этот костыль
 sigint_status = False
 
